@@ -1,0 +1,22 @@
+.navProfile{
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 1rem;
+border-bottom: 1px solid #E0E1E9;
+gap: 2px;
+}
+.imageContainer{
+    width: 50px;
+    overflow: hidden;
+    border-radius: 1rem;
+    
+}
+.imageContainer img{
+    width: 100%;
+    /* border-radius: 50%; */
+}
+
+.email{
+    color: #E0E1E9;
+}

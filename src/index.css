@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f6f8fa;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.btn {
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px 8px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.btnGreen {
+  background-color: #5fe978;
+  /* color: #fff; */
+  border: 3px solid #5fe978;
+}
+.btnBlue {
+  background-color: #2c6abb;
+  color: #ffffff;
+}
+.btnYellow {
+  background-color: #ffbd38;
+  color: #111;
+}
+.btnRed {
+  background-color: #fa3745;
+  color: #fff;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}

@@ -1,0 +1,26 @@
+/* .menuItemContainer{
+} */
+.menuItem{
+    display: flex;
+    gap: 1rem;
+}
+.menuItem{
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #8f94b7;
+    transition: all 0.3s ease;
+}
+.menuItem:hover{
+    background-color: #F1F3F4;
+}
+
+.menuItem:global(.active){
+    background-color: #F1F3F4;
+    border-radius: 3px;
+    color: #111;
+}
+/* .menuItem:link,
+.menuItem:visited{
+    
+} */

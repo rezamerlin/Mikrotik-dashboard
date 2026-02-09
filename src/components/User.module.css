@@ -1,0 +1,8 @@
+.usersContainer{
+    padding: 1rem;
+    width: 100%;
+}
+.users{
+    display: flex;
+    justify-content: space-between;
+}

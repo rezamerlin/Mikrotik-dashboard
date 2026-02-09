@@ -1,0 +1,28 @@
+{
+  "menu": [
+    {
+      "id": "home",
+      "label": "Home",
+      "path": "home",
+      "icon": "/home.svg"
+    },
+    {
+      "id": "users",
+      "label": "Users",
+      "path": "users",
+      "icon": "/users.svg"
+    },
+    {
+      "id": "user-profile",
+      "label": "User Profile",
+      "path": "profile",
+      "icon": "/profile.svg"
+    },
+    {
+      "id": "setting",
+      "label": "Setting",
+      "path": "setting",
+      "icon": "/settings.svg"
+    }
+  ]
+}

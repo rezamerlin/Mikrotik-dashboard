@@ -1,0 +1,17 @@
+.searchBox{
+    width: 100%;
+}
+.search {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    border: 1px solid #E0E1E9;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.searchBox input{
+    width: 100%;
+    border: none;
+    outline: none;
+}

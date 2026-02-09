@@ -1,0 +1,9 @@
+.rows td {
+  padding: 0.2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}

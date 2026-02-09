@@ -1,0 +1,24 @@
+{
+  "cards": [
+    {
+      "name": "Total User",
+      "icon": "/users.svg",
+      "statusColor": "green"
+    },
+    {
+      "name": "Total Download",
+      "icon": "/download.svg",
+      "statusColor": "blue"
+    },
+    {
+      "name": "Total Upload",
+      "icon": "/upload.svg",
+      "statusColor": "orange"
+    },
+    {
+      "name": "Active Sessions",
+      "icon": "/activity.svg",
+      "statusColor": "purple"
+    }
+  ]
+}
