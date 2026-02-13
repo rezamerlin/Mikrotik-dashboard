@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-const USERNAME = "";
-const PASSWORD = "";
+
 const TrafficContext = createContext();
 
 function TrafficProvider({ children }) {
@@ -11,7 +10,7 @@ function TrafficProvider({ children }) {
         const res = await fetch(`/router/rest/interface`, {
           method: "get",
           headers: {
-            Authorization: "Basic " + btoa(`${USERNAME}:${PASSWORD}`),
+            Authorization: "Basic " + btoa(``),
             "Content-Type": "application/json",
           },
         });

@@ -1,8 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
-const BASE_URL = "http://localhost:9000/";
 const UserContext = createContext();
-const USERNAME = "";
-const PASSWORD = "";
+const BASE_URL='https://my-json-server.typicode.com/rezamerlin/fake-api'
 function UserProvider({ children }) {
   const [menuData, setMenuData] = useState([]);
   const [cardHome, setCardHome] = useState([]);
@@ -14,7 +12,7 @@ function UserProvider({ children }) {
       try {
         setIsLoading((s) => !s);
 
-        const res = await fetch(`${BASE_URL}menu`);
+        const res = await fetch(`${BASE_URL}/menu`);
         const data = await res.json();
 
         setMenuData(data);
@@ -32,7 +30,7 @@ function UserProvider({ children }) {
     async function getCardHome() {
       try {
         setIsLoading((s) => !s);
-        const res = await fetch(`http://localhost:9001/cards`);
+        const res = await fetch(`${BASE_URL}/cards`);
         const data = await res.json();
         setIsLoading((s) => !s);
         setCardHome(data);
@@ -47,12 +45,8 @@ function UserProvider({ children }) {
     async function getUsers() {
       try {
         setIsLoading((s) => !s);
-        const res = await fetch(`/router/rest/user-manager/user`, {
+        const res = await fetch(`${BASE_URL}/users`, {
           method: "get",
-          headers: {
-            Authorization: "Basic " + btoa(`${USERNAME}:${PASSWORD}`),
-            "Content-Type": "application/json",
-          },
         });
 
         const data = await res.json();

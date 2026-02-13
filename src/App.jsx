@@ -12,11 +12,11 @@ import { TrafficProvider } from "./Contexts/TrafficContext";
 function App() {
   return (
     <UserProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Navigate to="dashboard" replace />} />
-          <Route path="dashboard" element={<Dashboard />}>
-            <TrafficProvider>
+      <TrafficProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Navigate to="dashboard" replace />} />
+            <Route path="dashboard" element={<Dashboard />}>
               <Route index element={<Navigate replace element={<Home />} />} />
               <Route path="home" element={<Home />} />
               <Route path="users" element={<User />} />
@@ -24,11 +24,11 @@ function App() {
               <Route path="users/:adduser" element={<AddUser />} />
               <Route path="profile" element={<UserProfile />} />
               <Route path="setting" element={<Setting />} />
-            </TrafficProvider>
-          </Route>
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
-        </Routes>
-      </BrowserRouter>
+            </Route>
+            <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          </Routes>
+        </BrowserRouter>
+      </TrafficProvider>
     </UserProvider>
   );
 }
