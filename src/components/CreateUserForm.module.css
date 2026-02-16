@@ -1,0 +1,64 @@
+.form {
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 3px 4px 2px rgba(119, 119, 119, 0.438);
+  transition: all 0.4s ease;
+}
+.form:hover {
+  transform: scale(1.05);
+}
+.form input[type="text"] {
+  padding: 5px;
+  /* border: 1px solid #11111131; */
+  border: none;
+  border-radius: 2px;
+  height: 2rem;
+  background-color: #f6f8fa;
+}
+.form input[type="text"]:focus {
+  outline: none;
+}
+
+.important {
+  display: flex;
+  flex-direction: column;
+}
+.important label {
+  margin-top: 1rem;
+}
+.moreOptions {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+
+.chooseServer {
+  margin-top: 2rem;
+}
+.selectServer {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: end;
+}
+.closeBtn {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.titleForm {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 1rem;
+}

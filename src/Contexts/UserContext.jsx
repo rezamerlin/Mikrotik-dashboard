@@ -1,11 +1,14 @@
 import { createContext, useContext, useEffect, useState } from "react";
+
 const UserContext = createContext();
-const BASE_URL='https://my-json-server.typicode.com/rezamerlin/fake-api'
+const BASE_URL = "https://my-json-server.typicode.com/rezamerlin/fake-api";
+
 function UserProvider({ children }) {
   const [menuData, setMenuData] = useState([]);
   const [cardHome, setCardHome] = useState([]);
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isShowModal, setIsShowModal] = useState(false);
 
   useEffect(() => {
     async function getMenu() {
@@ -59,8 +62,42 @@ function UserProvider({ children }) {
     }
     getUsers();
   }, []);
+
+  async function createUser(newUser) {
+    try {
+      const res = await fetch(`${BASE_URL}/users`, {
+        method: "post",
+        body: JSON.stringify(newUser),
+        headers: {
+          "Content-type": "application/json ; charset=UTF-8",
+        },
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      const data = await res.json();
+      setUsers((users) => [...users, data]);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+      alert("Field Post data");
+    } finally {
+      setIsShowModal(false);
+    }
+  }
   return (
-    <UserContext.Provider value={{ menuData, isLoading, cardHome, users }}>
+    <UserContext.Provider
+      value={{
+        menuData,
+        isLoading,
+        cardHome,
+        users,
+        createUser,
+        isShowModal,
+        setIsShowModal,
+      }}
+    >
       {children}
     </UserContext.Provider>
   );

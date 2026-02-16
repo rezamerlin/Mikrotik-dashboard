@@ -13,11 +13,13 @@ body {
   font-style: normal;
 }
 .btn {
-  border-radius: 5px;
+  border-radius: 3px;
   text-decoration: none;
   padding: 5px 8px;
   font-size: 1rem;
   font-weight: 500;
+  border: none;
+  cursor: pointer;
 }
 .btnGreen {
   background-color: #5fe978;
